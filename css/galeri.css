@@ -1,0 +1,81 @@
+div .img1 {
+   padding-top: 80px;
+   padding-left: 150px;
+   position: relative;
+}
+div .img2 {
+    padding: 30px;
+    float: right;
+    padding-right: 150px;
+    padding-top: 80px;
+    position: relative;
+    top: -485px;
+}
+div .img3 {
+    padding-left: 150px;
+    padding-top: 20px;
+}
+div .img4 {
+    float: right;
+    position: relative;
+    top: -305px;
+    left: 350px;
+}
+div .img5 {
+    float: right;
+    position: relative;
+    top: -285px;
+    padding-right: 150px;
+}
+div .img6 {
+    float: left;
+    padding-left: 50px;
+    top: -405px;
+    margin-top: 120px;
+    margin-left: 100px;
+    position: relative;
+}
+.img1 img {
+    transition: 0.4s ease;
+    
+}
+.img1:hover img {
+    transform: scale(1.08);
+}
+.img2 img {
+    transition: 0.4s ease;
+    
+}
+.img2:hover img {
+    transform: scale(1.08);
+}
+.img3 img {
+    transition: 0.4s ease;
+    
+}
+.img3:hover img {
+    transform: scale(1.08);
+}
+.img4 img {
+    transition: 0.4s ease;
+    
+}
+.img4:hover img {
+    transform: scale(1.08);
+}
+.img5 img {
+    transition: 0.4s ease;
+    width: 670px;
+    
+}
+.img5:hover img {
+    transform: scale(1.05);
+    
+}
+.img6 img {
+    transition: 0.4s ease;
+    
+}
+.img6:hover img {
+    transform: scale(1.08);
+}

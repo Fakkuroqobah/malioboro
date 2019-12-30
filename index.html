@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Malioboro - Home</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -20,12 +21,120 @@
 
         <div id="navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active-link">Home</a></li>
                 <li><a href="sejarah.html">Sejarah</a></li>
                 <li><a href="galeri.html">Galeri</a></li>
                 <li><a href="lokasi.html">Lokasi</a></li>
             </ul>
         </div>
+
+        <div id="content">
+            <div class="welcome">
+                <h2 class="heading">Malioboro</h2>
+                <p>Jalan Malioboro adalah nama salah satu kawasan jalan dari tiga jalan di Kota Yogyakarta yang membentang dari Tugu Yogyakarta hingga ke perempatan Kantor Pos Yogyakarta. Secara keseluruhan terdiri dari Jalan Margo Utomo, Jalan Malioboro, dan Jalan Margo Mulyo. Jalan ini merupakan poros Garis Imajiner Kraton Yogyakarta.</p>
+                <p>Pada tanggal 20 Desember 2013, pukul 10.30 oleh Sri Sultan Hamengkubuwono X nama dua ruas jalan Malioboro dikembalikan ke nama aslinya, Jalan Pangeran Mangkubumi menjadi jalan Margo Utomo, dan Jalan Jenderal Achmad Yani menjadi jalan Margo Mulyo.</p>
+            </div>
+
+            <div class="slide">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="img/galeri/gambar3.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="img/galeri/gambar5.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="img/galeri/gambar1.jpg" style="width:100%">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                    <span class="dots" onclick="currentSlide(1)"></span> 
+                    <span class="dots" onclick="currentSlide(2)"></span> 
+                    <span class="dots" onclick="currentSlide(3)"></span> 
+                </div>
+            </div>
+
+            <div class="video">
+                <h2 class="heading">Video</h2>
+                <div class="row">
+                    <div class="col cover1" style="margin-right: 20px;" onclick="cover1()">
+                        <div class="frame">
+                            <img src="img/cover/icon-play.png" alt="Malioboro">
+                            <span>Pesona Malioboro</span>
+                        </div>
+                    </div>
+
+                    <div class="col cover2" style="margin-right: 20px;" onclick="cover2()">
+                        <div class="frame">
+                            <img src="img/cover/icon-play.png" alt="Malioboro">
+                            <span>Angklung Carehal</span>
+                        </div>
+                    </div>
+
+                    <div class="col cover3" onclick="cover3()">
+                        <div class="frame">
+                            <img src="img/cover/icon-play.png" alt="Malioboro">
+                            <span>Wisata Malioboro</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <p class="text-footer">&copy; Wisata Malioboro Powered By TEKNIK INFORMATIKA UTY</p>
+        </div>
     </div>
+
+    <script>
+        function cover1() {
+            window.open('https://www.youtube.com/watch?v=m73Lu8bbkDY', '_blank');
+        }
+        function cover2() {
+            window.open('https://www.youtube.com/watch?v=CAppxlwtP1k', '_blank');
+        }
+        function cover3() {
+            window.open('https://www.youtube.com/watch?v=Dfw7GBsebdA', '_blank');
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dots");
+            if (n > slides.length) {slideIndex = 1} 
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none"; 
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block"; 
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
 </body>
 </html>
